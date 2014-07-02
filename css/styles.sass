@@ -1,0 +1,159 @@
+@import bourbon
+
+html, body
+  width: 100%
+  height: 100%
+
+body
+  font-family: 'Montserrat', sans-serif
+  color: black
+  background-color: #f1f1f1
+  font-size: 18px
+
+h1
+  font-size: 60px
+  letter-spacing: -0.03em
+
+p
+  margin-bottom: 20px
+  line-height: 1.6
+  opacity: .15
+
+a
+  color: #55ACEE
+  &:hover
+    text-decoration: none
+
+.main-content
+  max-width: 900px
+  padding: 80px 20px
+
+header
+  height: 80px
+  padding: 22px 25px
+  background: #222222
+  width: 100%
+  text-align: center
+
+a.menu
+  display: block
+  width: 30px
+  margin: 0 auto
+
+  .bar
+    background-color: #fff
+    display: block
+    height: 3px
+    width: 100%
+    margin: 6px 0
+
+.overlay
+  @include position(fixed, 0px 0 0 0px)
+  width: 100%
+  height: 100%
+  background-color: transparent
+  z-index: 10
+  display: none
+
+nav
+  position: fixed
+  top: 0
+  z-index: 100
+  @include transition(all .4s .4s)
+
+  ul
+    list-style: none
+    height: 100%
+    padding: 0
+    margin: 0
+    overflow: hidden
+
+    > li
+      display: table
+      text-align: center
+      float: left
+      @include transition(all .4s)
+
+      &:nth-child(1)
+        background-color: #1bb1e2
+      &:nth-child(2)
+        background-color: darken(#1bb1e2,3%)
+        @include transition-delay(.1s)
+      &:nth-child(3)
+        background-color: darken(#1bb1e2,6%)
+        @include transition-delay(.2s)
+      &:nth-child(4)
+        background-color: darken(#1bb1e2,9%)
+        @include transition-delay(.3s)
+      &:nth-child(5)
+        background-color: darken(#1bb1e2,12%)
+        @include transition-delay(.4s)
+
+      > a
+        color: #fff
+        text-transform: uppercase
+        display: table-cell
+        vertical-align: middle
+        font-size: 16px
+        letter-spacing: .05em
+        @include transition(all .2s linear)
+
+        &:hover
+          color: #fff
+          background-color: rgba(0,0,0,.2)
+
+
+  &.left, &.right
+    width: 280px
+    height: 100%
+
+    ul > li
+      width: 100%
+      height: 20.2%
+
+  &.left
+    left: -280px
+    ul > li
+      @include transform(translate(-100%, 0))
+
+  &.right
+    left: auto
+    right: -280px
+    ul > li
+      @include transform(translate(100%, 0))
+
+
+  &.top
+    left: 0
+    top: -200px
+    width: 100%
+    height: 200px
+
+    ul
+      width: 101%
+      > li
+        width: 20%
+        height: 100%
+        @include transform(translate(0, -100%))
+
+
+body.menu-open
+  cursor: url(../images/close.png) 20 20, auto
+
+  .overlay
+    display: block
+
+nav.open
+  @include transition-delay(0)
+
+  ul > li
+    @include transform(translate(0, 0))
+
+  &.left
+    left: 0
+
+  &.right
+    right: 0
+
+  &.top
+    top: 0

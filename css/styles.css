@@ -1,0 +1,171 @@
+html, body {
+  width: 100%;
+  height: 100%; }
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: black;
+  background-color: #f1f1f1;
+  font-size: 18px; }
+
+h1 {
+  font-size: 60px;
+  letter-spacing: -0.03em; }
+
+p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+  opacity: 0.15; }
+
+a {
+  color: #55acee; }
+  a:hover {
+    text-decoration: none; }
+
+.main-content {
+  max-width: 900px;
+  padding: 80px 20px; }
+
+header {
+  height: 80px;
+  padding: 22px 25px;
+  background: #222222;
+  width: 100%;
+  text-align: center; }
+
+a.menu {
+  display: block;
+  width: 30px;
+  margin: 0 auto; }
+  a.menu .bar {
+    background-color: white;
+    display: block;
+    height: 3px;
+    width: 100%;
+    margin: 6px 0; }
+
+.overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  z-index: 10;
+  display: none; }
+
+nav {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  -webkit-transition: all 0.4s 0.4s;
+  -moz-transition: all 0.4s 0.4s;
+  transition: all 0.4s 0.4s; }
+  nav ul {
+    list-style: none;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden; }
+    nav ul > li {
+      display: table;
+      text-align: center;
+      float: left;
+      -webkit-transition: all 0.4s;
+      -moz-transition: all 0.4s;
+      transition: all 0.4s; }
+      nav ul > li:nth-child(1) {
+        background-color: #1bb1e2; }
+      nav ul > li:nth-child(2) {
+        background-color: #19a6d4;
+        -webkit-transition-delay: 0.1s;
+        -moz-transition-delay: 0.1s;
+        transition-delay: 0.1s; }
+      nav ul > li:nth-child(3) {
+        background-color: #189cc7;
+        -webkit-transition-delay: 0.2s;
+        -moz-transition-delay: 0.2s;
+        transition-delay: 0.2s; }
+      nav ul > li:nth-child(4) {
+        background-color: #1691b9;
+        -webkit-transition-delay: 0.3s;
+        -moz-transition-delay: 0.3s;
+        transition-delay: 0.3s; }
+      nav ul > li:nth-child(5) {
+        background-color: #1486ab;
+        -webkit-transition-delay: 0.4s;
+        -moz-transition-delay: 0.4s;
+        transition-delay: 0.4s; }
+      nav ul > li > a {
+        color: white;
+        text-transform: uppercase;
+        display: table-cell;
+        vertical-align: middle;
+        font-size: 16px;
+        letter-spacing: 0.05em;
+        -webkit-transition: all 0.2s linear;
+        -moz-transition: all 0.2s linear;
+        transition: all 0.2s linear; }
+        nav ul > li > a:hover {
+          color: white;
+          background-color: rgba(0, 0, 0, 0.2); }
+  nav.left, nav.right {
+    width: 280px;
+    height: 100%; }
+    nav.left ul > li, nav.right ul > li {
+      width: 100%;
+      height: 20.2%; }
+  nav.left {
+    left: -280px; }
+    nav.left ul > li {
+      -webkit-transform: translate(-100%, 0);
+      -moz-transform: translate(-100%, 0);
+      -ms-transform: translate(-100%, 0);
+      -o-transform: translate(-100%, 0);
+      transform: translate(-100%, 0); }
+  nav.right {
+    left: auto;
+    right: -280px; }
+    nav.right ul > li {
+      -webkit-transform: translate(100%, 0);
+      -moz-transform: translate(100%, 0);
+      -ms-transform: translate(100%, 0);
+      -o-transform: translate(100%, 0);
+      transform: translate(100%, 0); }
+  nav.top {
+    left: 0;
+    top: -200px;
+    width: 100%;
+    height: 200px; }
+    nav.top ul {
+      width: 101%; }
+      nav.top ul > li {
+        width: 20%;
+        height: 100%;
+        -webkit-transform: translate(0, -100%);
+        -moz-transform: translate(0, -100%);
+        -ms-transform: translate(0, -100%);
+        -o-transform: translate(0, -100%);
+        transform: translate(0, -100%); }
+
+body.menu-open {
+  cursor: url(../images/close.png) 20 20, auto; }
+  body.menu-open .overlay {
+    display: block; }
+
+nav.open {
+  -webkit-transition-delay: 0;
+  -moz-transition-delay: 0;
+  transition-delay: 0; }
+  nav.open ul > li {
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0); }
+  nav.open.left {
+    left: 0; }
+  nav.open.right {
+    right: 0; }
+  nav.open.top {
+    top: 0; }
