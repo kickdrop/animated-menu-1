@@ -157,3 +157,24 @@ nav.open
 
   &.top
     top: 0
+
+
+@media (max-width: 767px)
+  nav
+    &.top
+      width: 280px
+      height: 100%
+      top: 0
+      left: -280px
+
+      ul > li
+        width: 100%
+        height: 20.2%
+        @include transform(translate(-100%, 0))
+
+    &.open
+      &.top
+        left: 0
+
+      ul > li
+        @include transform(translate(0, 0))
