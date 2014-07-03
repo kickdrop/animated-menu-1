@@ -6,6 +6,15 @@ $(document).ready(function() {
     return false;
   });
 
+  //
+  // Use the javascript below when implementing. The code above is for demo purposes only.
+  //
+  // $('.menu').click(function() {
+  //   $('nav').addClass('open');
+  //   $('body').addClass('menu-open');
+  //   return false;
+  // });
+
   $(document).click(function() {
     $('body').removeClass('menu-open');
     $('nav').removeClass('open');
